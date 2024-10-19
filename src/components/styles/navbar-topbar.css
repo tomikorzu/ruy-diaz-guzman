@@ -1,7 +1,7 @@
 :root {
   /* topbar */
   --topbar-bg-color: #222;
-  --topbar-text-color: #d3d3d3;
+  --topbar-text-color: #f2f2f2;
 
   /* navbar */
 }
@@ -10,15 +10,23 @@
   background-color: var(--topbar-bg-color);
   color: var(--topbar-text-color);
   display: flex;
+  flex-wrap: wrap;
   justify-content: end;
-  padding: 15px;
+  padding: 15px 30px 15px 30px;
   gap: 15px;
   align-items: center;
   width: 100%;
-  height: 40px;
 }
 .navbar-topbar li {
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    font-size: 13.5px;
     align-items: center;
+    font-weight: 450;
+}
+.navbar-topbar i {
+    transform: translateY(1px);
+}
+.navbar-topbar span {
+    letter-spacing: 2px;
 }
