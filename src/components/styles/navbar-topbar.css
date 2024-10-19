@@ -1,0 +1,24 @@
+:root {
+  /* topbar */
+  --topbar-bg-color: #222;
+  --topbar-text-color: #d3d3d3;
+
+  /* navbar */
+}
+
+.navbar-topbar {
+  background-color: var(--topbar-bg-color);
+  color: var(--topbar-text-color);
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+  gap: 15px;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+}
+.navbar-topbar li {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
