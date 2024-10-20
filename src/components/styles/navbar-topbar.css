@@ -4,29 +4,90 @@
   --topbar-text-color: #f2f2f2;
 
   /* navbar */
+  --navbar-bg-color: #333;
+  --navbar-text-color: #f2f2f2;
 }
 
 .navbar-topbar {
   background-color: var(--topbar-bg-color);
   color: var(--topbar-text-color);
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: end;
-  padding: 15px 30px 15px 30px;
-  gap: 15px;
-  align-items: center;
+  padding: 15px 20px;
+  gap: 10px;
+  align-items: end;
   width: 100%;
 }
 .navbar-topbar li {
-    display: flex;
-    gap: 10px;
-    font-size: 13.5px;
-    align-items: center;
-    font-weight: 450;
+  display: flex;
+  gap: 10px;
+  font-size: 13.5px;
+  align-items: center;
+  font-weight: 450;
 }
 .navbar-topbar i {
-    transform: translateY(1px);
+  transform: translateY(1px);
 }
 .navbar-topbar span {
-    letter-spacing: 2px;
+  letter-spacing: 2px;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  background-color: var(--navbar-bg-color);
+  color: var(--navbar-text-color);
+}
+
+@media (min-width: 1024px) {
+  .navbar-topbar {
+    flex-direction: row;
+    padding: 15px 50px 15px;
+  }
+  .navbar ul {
+    display: flex;
+    background-color: transparent;
+    color: var(--navbar-text-color);
+    padding-right: 55px;
+  }
+  .navbar ul li button {
+    background-color: transparent;
+    color: var(--navbar-text-color);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: 500;
+    padding: 20px 20px;
+  }
+  .navbar ul li {
+    position: relative;
+  }
+  .navbar ul li button:before {
+    content: "";
+    position: absolute;
+    bottom: 12.5px;
+    left: 20px;
+    width: 0;
+    height: 2px;
+    background: var(--navbar-text-color);
+    border-radius: 25px;
+    transition: width 0.3s;
+  }
+  .navbar ul li button:hover::before {
+    width: calc(100% - 40px);
+  }
+  .navbar ul li button::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    transition: background 0.3s;
+  }
+  .navbar ul li button:hover::after {
+  }
 }
