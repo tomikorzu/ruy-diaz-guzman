@@ -1,6 +1,22 @@
 import "./styles/navbar-topbar.css";
+import React, { useEffect } from "react";
 
 const NavbarTopBar = ({ items }) => {
+  useEffect(() => {
+    const toggleBtn = document.getElementById("toggle-menu");
+    const navbarMenu = document.getElementById("navbar-menu");
+    const toggleActive = () => {
+      toggleBtn.classList.toggle("active");
+      navbarMenu.classList.toggle("active");
+    };
+
+    toggleBtn.addEventListener("click", toggleActive);
+
+    return () => {
+      toggleBtn.removeEventListener("click", toggleActive);
+    };
+  });
+
   return (
     <>
       <ul className="navbar-topbar">
@@ -14,7 +30,7 @@ const NavbarTopBar = ({ items }) => {
         </li>
       </ul>
       <nav className="navbar">
-        <ul>
+        <ul id="navbar-menu">
           {items.map((item, index) => (
             <li key={index}>
               <button className="btn-link">{item}</button>
