@@ -25,7 +25,11 @@ const Project = () => {
       <p>12 exclusivos departamentos para que elijas en cual querés vivir…</p>
       <article className="img-container">
         {images.map((img) => {
-          return <img src={img.src} alt={img.name} key={img.name} />;
+          return (
+            <figure key={img.name}>
+              <img src={img.src} alt={img.name} />
+            </figure>
+          );
         })}
       </article>
     </>
