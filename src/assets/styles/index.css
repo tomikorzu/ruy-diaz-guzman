@@ -352,8 +352,27 @@ button {
   }
 }
 
+#wsp-btn {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  border-radius: 100%;
+  padding: 12.5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s;
+  background-color: #22b057;
+  color: var(--text-color);
+  font-size: 1.5em;
+  z-index: 10;
+}
+
 /* mouseover transitions */
 @media (min-width: 1024px) {
+  #wsp-btn:hover{
+    background-color: #089a3e;
+  }
   .btn:hover {
     background-color: var(--btn-color-hover);
   }
