@@ -1,8 +1,9 @@
 import NavbarTopBar from "../components/NavbarTopBar.jsx";
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { changePageSetting } from "../utils/mainFunctions.js";
 
 import HomeSection from "../sections/HomeSection.jsx";
+import Project from "../sections/Project.jsx";  
 
 const Home = () => {
   useEffect(() => {
@@ -34,6 +35,9 @@ const Home = () => {
       <main className="fade-in">
         <section id="home">
           <HomeSection />
+        </section>
+        <section id="project">
+          <Project />
         </section>
       </main>
     </>

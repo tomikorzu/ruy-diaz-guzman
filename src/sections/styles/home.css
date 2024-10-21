@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  padding: 150px 30px 0 30px;
 }
 
 .main-header {
@@ -15,30 +16,44 @@
 }
 
 .main-image {
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   object-fit: cover;
   z-index: -1;
   filter: brightness(0.6);
 }
 
 .text-container {
-  z-index: 40;
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
   color: #f4f4f4;
   width: fit-content;
   white-space: wrap;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .author {
   text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 2px;
 }
 #animated-text {
   background-color: #00000090;
-  border-right: 2px solid;
   flex-wrap: wrap;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 2px;
+}
+
+@media (min-width: 1024px) {
+  .text-container{
+    transform: translate(-40px, 30px);
+  }
+  #animated-text {
+    font-size: 28px;
+  }
 }

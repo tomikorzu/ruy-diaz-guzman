@@ -6,6 +6,7 @@
 
 /* Fonts */
 @import "https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap";
 
 /* Variables */
 :root {
@@ -51,7 +52,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: opacity 0.4s;
-  font-family: var(--font-montserrat);
+  font-family: "Didact Gothic", sans-serif;
   scroll-behavior: smooth;
 }
 .main-center {
@@ -370,7 +371,7 @@ button {
 
 /* mouseover transitions */
 @media (min-width: 1024px) {
-  #wsp-btn:hover{
+  #wsp-btn:hover {
     background-color: #089a3e;
   }
   .btn:hover {
