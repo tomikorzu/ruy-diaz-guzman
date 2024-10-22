@@ -42,7 +42,12 @@ const Departments = () => {
                 window.open(unit.file, "_blank");
               }}
             >
-              {unit.dept}
+              <h4 className={unit.avaible ? "" : "no-stock"}>{unit.dept}</h4>
+              <label> {unit.avaible ? "" : "no disponible"}</label>
+              <div
+                className="circle-unit"
+                style={{ backgroundColor: unit.color }}
+              ></div>
             </div>
           ))}
         </div>
