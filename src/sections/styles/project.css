@@ -10,6 +10,9 @@
   font-size: 28px;
   font-weight: 400;
 }
+#project p {
+    margin: 5px;
+}
 .grey-text{
     color: #ffffffb5;
     font-size: 18px;
