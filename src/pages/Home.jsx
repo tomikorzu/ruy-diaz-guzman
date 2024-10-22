@@ -3,7 +3,8 @@ import { useEffect } from "react";
 import { changePageSetting } from "../utils/mainFunctions.js";
 
 import HomeSection from "../sections/HomeSection.jsx";
-import Project from "../sections/Project.jsx";  
+import Project from "../sections/Project.jsx";
+import Departments from "../sections/Departments.jsx";
 
 const Home = () => {
   useEffect(() => {
@@ -38,6 +39,9 @@ const Home = () => {
         </section>
         <section id="project">
           <Project />
+        </section>
+        <section id="departments">
+          <Departments />
         </section>
       </main>
     </>
