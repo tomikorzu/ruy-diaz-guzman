@@ -3,7 +3,19 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 20px;
+  padding: 50px 20px 20px;
+  background-color: #1C1E21;
+}
+#project h2 {
+  font-size: 28px;
+  font-weight: 400;
+}
+.grey-text{
+    color: #ffffffb5;
+    font-size: 18px;
+}
+.icon-project{
+    margin: 0px 0 20px;
 }
 .img-container {
   display: grid;
@@ -23,12 +35,15 @@
   }
 }
 @media (min-width: 1024px) {
+    #project h2{
+        font-size: 32px;
+    }
   .img-container {
     grid-template-columns: repeat(3, 1fr);
     margin: 50px 0;
   }
   .img-container figure {
-    width: 300px;
+    max-width: 350px;
     height: 200px;
     overflow: hidden;
   }
