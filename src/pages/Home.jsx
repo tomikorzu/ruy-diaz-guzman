@@ -27,9 +27,10 @@ const Home = () => {
     <>
       <header className="main-header fade-in">
         <NavbarTopBar
-          items={["Proyecto", "Departamentos", "Terminaciones", "Ubicacion"]}
+          items={["proyecto", "departamentos", "terminaciones", "ubicacion"]}
         />
       </header>
+      scrollTo
       <button id="wsp-btn">
         <i className="fa-brands fa-whatsapp"></i>
       </button>
@@ -37,12 +38,14 @@ const Home = () => {
         <section id="home">
           <HomeSection />
         </section>
-        <section id="project">
+        <section id="proyecto">
           <Project />
         </section>
-        <section id="departments">
+        <section id="departamentos">
           <Departments />
         </section>
+        <section id="terminaciones"></section>
+        <section id="ubicacion"></section>
       </main>
     </>
   );

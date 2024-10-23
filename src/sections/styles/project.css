@@ -1,4 +1,4 @@
-#project {
+#proyecto {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -6,11 +6,11 @@
   padding: 50px 20px 20px;
   background-color: #1c1e21;
 }
-#project h2 {
+#proyecto h2 {
   font-size: 28px;
   font-weight: 400;
 }
-#project p {
+#proyecto p {
   margin: 5px;
 }
 .grey-text {
@@ -40,7 +40,7 @@
   }
 }
 @media (min-width: 1024px) {
-  #project h2 {
+  #proyecto h2 {
     font-size: 32px;
   }
   .img-container {

@@ -115,6 +115,7 @@
   .navbar-topbar {
     flex-direction: row;
     padding: 15px 50px 15px;
+    gap: 30px;
   }
   .navbar ul {
     display: flex;
@@ -147,5 +148,9 @@
   }
   .navbar ul li button:hover::before {
     width: calc(100% - 40px);
+  }
+  .navbar ul li button.active::before {
+    width: calc(100% - 40px);
+    transition: none;
   }
 }

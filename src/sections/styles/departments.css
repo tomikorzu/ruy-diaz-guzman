@@ -1,4 +1,4 @@
-#departments {
+#departamentos {
   background-color: #f3f3f3;
   color: #222;
   display: flex;
@@ -120,8 +120,9 @@ footer ul li {
   padding: 20px 0;
 }
 .unit h4{
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
+  pointer-events: none;
 }
 
 .no-stock{
@@ -132,7 +133,9 @@ footer ul li {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
+  pointer-events: none;
 }
+
 
 .circle-unit {
   position: absolute;
@@ -143,4 +146,10 @@ footer ul li {
   border-radius: 100%;
   border: 1px solid #333;
   pointer-events: none;
+}
+
+@media (min-width: 1200px) {
+  .unit label {
+    font-size: 16px;
+  }
 }

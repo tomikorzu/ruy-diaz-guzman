@@ -1,5 +1,5 @@
 import "./styles/navbar-topbar.css";
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 const NavbarTopBar = ({ items }) => {
   useEffect(() => {
@@ -16,6 +16,52 @@ const NavbarTopBar = ({ items }) => {
       toggleBtn.removeEventListener("click", toggleActive);
     };
   });
+
+  useEffect(() => {
+    const btnLinks = document.querySelectorAll(".btn-link");
+    const goToSection = (btn) => {
+      const targetElement = document.getElementById(btn.textContent);
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop - 100,
+          behavior: "smooth",
+        });
+      }
+    };
+
+    btnLinks.forEach((btn) => {
+      btn.addEventListener("click", () => goToSection(btn));
+    });
+
+    return () => {
+      btnLinks.forEach((btn) => {
+        btn.removeEventListener("click", () => goToSection(btn));
+      });
+    };
+  }, []);
+
+  // useEffect(() => {
+  //   const sections = document.querySelectorAll("section");
+  //   const btnLinks = document.querySelectorAll(".navbar ul li button");
+
+  //   window.addEventListener("scroll", () => {
+  //     let currentSection = "";
+
+  //     sections.forEach((section) => {
+  //       const sectionTop = section.offsetTop;
+  //       if (window.pageYOffset >= sectionTop - 400) {
+  //         currentSection = section.getAttribute("id");
+  //       }
+  //     });
+
+  //     btnLinks.forEach((btn) => {
+  //       btn.classList.remove("active");
+  //       if (btn.textContent.trim() === currentSection) {
+  //         btn.classList.add("active");
+  //       }
+  //     });
+  //   });
+  // }, []);
 
   return (
     <>
