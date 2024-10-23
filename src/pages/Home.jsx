@@ -30,7 +30,6 @@ const Home = () => {
           items={["proyecto", "departamentos", "terminaciones", "ubicacion"]}
         />
       </header>
-      scrollTo
       <button id="wsp-btn">
         <i className="fa-brands fa-whatsapp"></i>
       </button>
