@@ -81,8 +81,7 @@ footer ul li {
 
 .parent {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: 1fr 2fr 2fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
   width: 40%;
@@ -99,10 +98,6 @@ footer ul li {
   align-items: center;
 }
 
-.bigger {
-  height: auto;
-}
-
 .floor {
   display: flex;
   justify-content: end;
@@ -113,29 +108,30 @@ footer ul li {
   font-size: 28px;
   border-bottom: 1px solid #333;
 }
+
 .unit {
   display: flex;
   flex-direction: column;
   position: relative;
   padding: 20px 0;
 }
-.unit h4{
+
+.unit h4 {
   font-size: 18px;
   font-weight: 600;
   pointer-events: none;
 }
 
-.no-stock{
+.no-stock {
   text-decoration: line-through;
 }
 
-.unit label{
+.unit label {
   font-size: 12px;
   font-weight: 600;
   text-transform: uppercase;
   pointer-events: none;
 }
-
 
 .circle-unit {
   position: absolute;
